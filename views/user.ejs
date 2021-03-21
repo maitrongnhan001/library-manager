@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/header'); -%>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!--<img src="assets/img/navbar-logo.svg" alt="" />-->
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Library</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Books</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">tips</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">OUR AMAZING TEAM</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Welcome To Our Library!</div>
+                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="./getBook.html">Get Book</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">This is services support library</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Support Online</h4>
+                        <p class="text-muted">We can see books already in the library, support find to books for easy and services to borrow books.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">E-Commerce</h4>
+                        <p class="text-muted">You can sell book in here, admin will look at the your book and give decision arrge or unarrge</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Web Security</h4>
+                        <p class="text-muted">All your information is confidential, except your email, your name and your books</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Books-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Books</h2>
+                    <h3 class="section-subheading text-muted">You can look at the books at under</h3>
+                </div>
+                <div class="row">
+                    <!--items-->
+                    <% for (var i = 0; i < Books.length; i++) { %>
+                        <div class="col-lg-4 col-sm-6 mb-4">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" href="/getBook/<%= Books[i].Code %>">
+                                    <div class="portfolio-hover">
+                                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    </div>
+                                    <img class="img-fluid-book" src="<%= Books[i].pathImage %>" alt="" />
+                                </a>
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading"><%= Books[i].Name %></div>
+                                    <div class="portfolio-caption-subheading text-muted"><%= Books[i].Author %></div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Tips</h2>
+                    <br>
+                    <br>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/1.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tips one</h4>
+                                <h4 class="subheading">John Adams</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Let us tenderly and kindly cherish, therefore, the means of knowledge. Let us dare to read, think, speak, and write.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/2.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tips two</h4>
+                                <h4 class="subheading">Louisa May Alcott</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Good books, like good friends, are few and chosen; the more select, the more enjoyable. </p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/3.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tips three</h4>
+                                <h4 class="subheading">Rene Descartes</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">The reading of all good books is like a conversation with the finest minds of past centuries.</p>
+
+                            </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../assets/img/about/4.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tips four</h4>
+                                <h4 class="subheading">Dr Seuss</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">The more that you read, the more things you will know. The more that you learn, the more places you’ll go. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br />
+                                Of Our
+                                <br />
+                                Story!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">We are website creator.</h3>
+                </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="../assets/img/team/4.jpg" alt="" />
+                            <h4>Mai Trong Nhan</h4>
+                            <p class="text-muted">Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">We offer the best reading and library use experience.</p></div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6 center">
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <input class="form-control" id="password" type="password" placeholder="password *" required="required" data-validation-required-message="Please enter your password." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <%- include('layouts/footer'); -%>
+        <!-- Bootstrap core JS-->
+        <%- include('layouts/scripts'); -%>
+    </body>
+</html>
