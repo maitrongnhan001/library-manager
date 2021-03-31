@@ -14,6 +14,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Add book</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/logout">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,34 +39,34 @@
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group addBook">
-                                <input class="form-control" name="Name" id="name-book" type="text" placeholder="Name book *" data-validation-required-message="Please enter name book." />
+                                <input class="form-control" name="Name" id="name-book" type="text" placeholder="Name book *" required data-validation-required-message="Please enter name book." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group addBook">
-                                <input class="form-control" name="Code" id="code-book" type="text" placeholder="Code *" data-validation-required-message="Please enter code." />
+                                <input class="form-control" name="Code" id="code-book" type="text" placeholder="Code *" required data-validation-required-message="Please enter code." />
                                 <span><%= message %></span>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group addBook">
-                                <input class="form-control" name="Author" id="authur" type="text" placeholder="Authur *" data-validation-required-message="Please enter Authur." />
+                                <input class="form-control" name="Author" id="authur" type="text" placeholder="Authur *" required data-validation-required-message="Please enter Authur." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group addBook">
-                                <input class="form-control" name="Subjected" id="subjected" type="text" placeholder="Subjected *" data-validation-required-message="Please enter subjected." />
+                                <input class="form-control" name="Subjected" id="subjected" type="text" placeholder="Subjected *" required data-validation-required-message="Please enter subjected." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group addBook">
-                                <input class="form-control" name="Amount" id="amount" type="number" placeholder="Amount *" data-validation-required-message="Please enter amount." />
+                                <input class="form-control" name="Amount" id="amount" type="number" placeholder="Amount *" required data-validation-required-message="Please enter amount." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group addBook">
-                                <input class="form-control" name="image" id="img" type="file" data-validation-required-message="Please upload image." />
+                                <input class="form-control" name="image" id="img" type="file" required data-validation-required-message="Please upload image." />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0 addBook description">
-                                <textarea class="form-control" name="Description" id="description" placeholder="description *" data-validation-required-message="Please enter a description."></textarea>
+                                <textarea class="form-control" name="Description" id="description" placeholder="description *" required data-validation-required-message="Please enter a description."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>

@@ -10498,37 +10498,47 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 @media (min-width: 200px){
     .container-book{
-        width: 85%;
         margin: 0 auto;
         display: block;
     }
     .book-img{
-        width: 500px;
+      position: relative;
+      left: 5%;
+      width: 90%;
+      height: 350px;
     }
     
     .container-info{
-        width: 60%;
-        position: relative;
         margin: 0 auto;
+        width: 200px;
+        position: relative;
+    }
+
+    .btnRT{
+      margin: 0 70px;
     }
 }
 
 @media (min-width: 650px){
     .container-book{
         display: flex;
-        width: 1000px;
         margin: 0 auto;
     }
     .book-img{
-        width: 500px;
+      width: 400px;
+      height: 350px;
     }
     
     .container-info{
-        width: 400px;
-        position: relative;
-        top: 100px;
-        right: 80px;
-        margin: 0 auto;
+      position: relative;
+      top: 60px;
+      left: 50px;
+    }
+
+    .return{
+      position: relative;
+      top: 10px;
+      left: 50px;
     }
 }
 
@@ -10537,22 +10547,32 @@ section#contact form#contactForm :-ms-input-placeholder {
 @media (min-width: 1000px){
     .container-book{
         display: flex;
-        width: 1000px;
         margin: 0 auto;
+        background-color: #fff;
     }
     .book-img{
-        width: 500px;
+        width: 400px;
+        height: 350px;
     }
     
     .container-info{
-        width: 400px;
         position: relative;
-        top: 100px;
+        top: 60px;
+        left: 50px;
+    }
+    .return{
+      position: relative;
+        top: 10px;
+        left: 50px;
     }
 }
 
+.return a {
+  text-decoration: none;
+}
+
 .container-description{
-    width: 80%;
+    width: 60%;
     position: relative;
     right: 0;
     text-align: justify;
@@ -10573,4 +10593,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .addBook span {
     color: red;
+}
+
+.while {
+  color: #fff;
 }

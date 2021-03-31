@@ -13,11 +13,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/admin/return">Return</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Books</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Add Book</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Delete Book</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/admin/addUser">Add user</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/admin/addBook">Add Book</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/admin/deleteBook">Delete Book</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Update Book</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/logout">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +29,7 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To Our Library!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/returnBook">Return book</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/admin/borrowBook">Borrow</a>
             </div>
         </header>
         <!-- Services-->
@@ -77,7 +79,7 @@
                     <% for (var i = 0; i < Books.length; i++) { %>
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="portfolio-item">
-                                <a class="portfolio-link" href="/getBook/<%= Books[i].Code %>">
+                                <a class="portfolio-link" href="/admin/borrowBook/<%= Books[i].Code %>">
                                     <div class="portfolio-hover">
                                         <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                     </div>
@@ -179,6 +181,30 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">We offer the best reading and library use experience.</p></div>
                 </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Update book</h2>
+                    <h3 class="section-subheading text-muted">Enter full infomation about your book.</h3>
+                </div>
+
+                <form action="/admin/updateBook" method="POST">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6 center">
+                            <div class="form-group addBook">
+                                <input class="form-control" name="Code" id="code-book" type="text" placeholder="Code *" required data-validation-required-message="Please enter code." />
+                                <span><%= message %></span>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="text-center">
+                        <input id="submit-book"class="btn btn-primary btn-xl text-uppercase" type="submit" value="Update book">
+                    </div>
+                </form>
             </div>
         </section>
         <!-- Footer-->
