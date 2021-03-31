@@ -2,6 +2,7 @@ const book = require('../models/books.js');
 const borrow = require('../models/borrowBook.js');
 
 module.exports = (req, res) => {
+    //e
     borrow.findByIdAndDelete(req.params.id, (err, borrowInfo) => {
         book.findOne({
             Code: borrowInfo.CodeBook
